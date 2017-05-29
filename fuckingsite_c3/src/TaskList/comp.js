@@ -1,10 +1,20 @@
 import React, { Component } from 'react';
 import './comp.style.scss';
+import Task from '../Task/comp.js';
 
 class TaskList extends Component {
     render(){
+        const tasks = this.props.tasks;
+        const removeTask = this.props.removeTask;
         return (
-            <ul className = "task--list">{this.props.children}</ul>
+            <ul className = "task--list">
+              {tasks.map((task,id) => {
+                  task.id = id;
+                  return ( 
+                    <Task onClickHandler={(id) => removeTask(id)} task={task} />
+                  ); 
+              })}
+            </ul>
         )    
     }
 }

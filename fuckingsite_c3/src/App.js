@@ -12,7 +12,6 @@ import FontIcon from 'material-ui/FontIcon';
 import style from 'material-ui/Popover';
 import TaskCreator from './TaskCreator/comp.js';
 import TaskList from './TaskList/comp.js';
-import Task from './Task/comp.js';
 
 var quotes = ["1", "2", "3", "4", "5" ];
 var sayings = ["super","sick","amazing"] 
@@ -20,22 +19,13 @@ var _this;
 
 
 class App extends Component {
-  
- /* constructor(){
-    super();
-    _this = this;
-    this.state = {
-      index: 0
-    }
-  }
-  */
 
   constructor(props){
     super(props);
     this.state = {
       tasks: [
-        {taskName: "Task 1"}, 
-        {taskName: "Task 2"},
+        {name: "Task 1"}, 
+        {name: "Task 2"},
         ]
     }
   }
@@ -54,7 +44,7 @@ class App extends Component {
       return;
 
     const tasks = this.state.tasks.slice(0);
-    tasks.push({taskName: e.target.value});
+    tasks.push({name: e.target.value});
     this.setState({tasks: tasks});
 
   }
@@ -121,14 +111,7 @@ class App extends Component {
         <h1> My todo-list </h1>
         <div className ="block_3">
           <TaskCreator onKeyUpHandler={this.createTask.bind((this))} />
-            {this.state.tasks.length}
-          
-            <ul className = "task--list">
-              {this.state.tasks.map((task,i) => {
-                  return <Task onClickHandler={this.removeTask.bind(this, i)} taskName={task.taskName} key = {"i"} />
-                  })
-              }
-            </ul>
+          <TaskList removeTask={(id) => this.removeTask(id)} tasks={this.state.tasks}/>
         </div>
         </div>
         </div>
