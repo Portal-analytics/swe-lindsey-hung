@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
 class Form extends Component {
-    constructor (props) {
+    constructor(props) {
         super(props)
         this.state = {
             contract: '',
@@ -10,67 +10,78 @@ class Form extends Component {
             reqs: []
         }
     }
-  
-    handleChange(field, event){
+
+    handleChange(field, event) {
         this.setState({
             ...this.state,
             [field]: event.target.value
         });
+        console.log(this.state);
     }
 
-    convertToList(){
-
-    }
-
-    handleClick(){
-        var entry = "Contract:" + this.state.contract + '\n' + "Description: " + this.state.description + '\n' + "Price: " + this.state.price;
-        var entryDisplay = "Contract:" + this.state.contract + '\n' + "Price: " + this.state.price;
-
-        var requestArray = this.state.reqs;
-        var requestList = this.state.reqs;
-
-        requestArray.push({
-            text: entry,
-        });
-
-        requestList.push({
-            text: entryDisplay,
-        });
- 
+    handleClick(event) {
+        var entry=[];
+        entry.push(this.state.contract);
+        entry.push(this.state.description);
+        entry.push(this.state.price);
+        let newContracts = this.state.reqs.concat([entry]);
         this.setState({
-            ...this.state,
-            reqs: requestArray,
-            reqsDisplay: requestArray
-        });
-
-        console.log(this.state.reqs);
+            contract:this.state.contract,
+            description: this.state.description,
+            price: this.state.price,
+            reqs: newContracts
+        })
+      console.log(this.state)
+      event.preventDefault();
     }
 
-  render () {
-    return (
-      <div>
-        <label>Contract: </label>
-        <input type='text' placeholder='Name the contract' value={this.state.contract} onChange={(event)=> this.handleChange('contract', event)} />
-        <br />
+    render() {
+        const contractList = this.state.reqs.map(
+            (c) => {
+                return(
+                    <li> {"Contract: " + c[0] + " Description: " + c[1] + " Price: " + c[2]} </li> 
+                );
+            }
+        );
 
-        <label>Description: </label>
-        <input type='text' placeholder='Describe contract here' value={this.state.description} onChange={(event)=> this.handleChange('description', event)} />
-        <br />
-        
-        <label>Price: </label>
-        <input type='text' placeholder='$$$' value={this.state.price} onChange={(event)=> this.handleChange('price', event)}/>
-        <br />
+        console.log(contractList);
 
-        <input type="button" onClick={(event)=> this.handleClick()} value="Submit" />
+        return ( 
+        <div>
+            <label > Contract: </label> 
+            <input 
+                type = 'text'
+                placeholder = 'Name the contract'
+                value = {this.state.contract}
+                onChange = {(event) => this.handleChange('contract', event)}/> 
+            <br />
 
-         <ul>
-          {this.state.reqs.map(function(req,key){
-            return <li key={key}>{req}</li>;
-          })}
-        </ul>
-      </div>
-    )
-  }
+            <label> Description: </label> 
+            <input 
+                type = 'text'
+                placeholder = 'Describe contract here'
+                value = {this.state.description}
+                onChange = {(event) => this.handleChange('description', event)}/>
+            <br />
+
+            <label> Price: </label> 
+            <input 
+                type = 'text'
+                placeholder = '$$$'
+                value = {this.state.price}
+                onChange = {(event) => this.handleChange('price', event)}/> 
+            <br />
+
+            <input 
+                type = "button"
+                onClick = {(event) => this.handleClick(event)}
+                value = "Submit" />
+            <ul type="none">
+                {contractList}
+            </ul>
+            </div>
+        )
+    }
 }
 
 export default Form
