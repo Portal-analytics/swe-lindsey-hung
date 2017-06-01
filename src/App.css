@@ -1,0 +1,51 @@
+.App {
+  
+}
+
+.Productivity{
+  height:325px;
+  background-color: gray;
+  position:absolute;
+  left:0; top:300px; bottom: 0;
+  text-align: center;
+  margin:0;
+}
+
+img{
+  width:178px;
+}
+
+.Dashboard {
+    position: absolute;
+    left:178px; top:65px; right:0; bottom:0;
+    background-color: white;
+    background-image: url("http://www.intrawallpaper.com/static/images/gradient-background.jpg")
+}
+
+.top{
+  text-align: center;
+  height: auto;
+}
+
+.bottom{
+  text-align: center;
+  height: auto;
+}
+
+.RemindTile{
+  text-align: center;
+  height: 247px;
+  width: 45%;
+  margin:20px;
+  background-color: lightyellow;
+  display:inline-block;
+}
+
+.ToDoTile{
+  text-align: center;
+  height: 247px;
+  width: 45%;
+  margin:20px;
+  background-color: lightgreen;
+  display:inline-block;
+}

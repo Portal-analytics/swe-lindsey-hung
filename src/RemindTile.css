@@ -1,0 +1,52 @@
+.RemindTile{
+  text-align: center;
+  height: 275px;
+  width: 35%;
+  margin:20px;
+  /*background-color:lightyellow;*/
+  display:inline-block;
+	position: fixed;
+	top: 370px;
+	left: 800px;
+	background-image: url("http://www.colehardware.com/wp-content/themes/cole/images/corkboard-background.jpg");
+	background-size: cover;
+	
+}
+
+h1{
+  display: inline-block;
+  text-align: center;
+}
+
+.editButton3 {
+  width: 30px;
+  height: auto;
+	background-color:lightgoldenrodyellow;
+	border-radius:10px;
+	border:1px solid gold;
+	position:relative;
+  left:120px; right:0; top:-10px; bottom:0;
+	cursor:pointer;
+	color: lightgray;
+	font-family:Arial;
+	font-size:20px;
+	text-align: center;
+	text-decoration:none;
+}
+.editButton3:hover {
+	background-color:gold;
+}
+.editButton3:active {
+	position:relative;
+	top:-7px;
+}
+
+.reminder_button {
+	width: 20px;
+	height: 10px;
+
+}
+
+.contract {
+	size: 20px;
+}

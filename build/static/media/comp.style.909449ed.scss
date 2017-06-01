@@ -1,0 +1,28 @@
+.task--creator {
+
+    flex: 1;
+    padding-top: 20px; //This is sick!!!!!
+
+    label, input {
+
+    width: 100%;    
+    display: block;
+    box-sizing: border-box;
+
+    }
+
+    label {
+        margin-bottom: 3px;
+    }
+
+
+    input {    //words you type in the textbox
+        padding: 15px 10px;
+        font-family: Helvetica;
+        font-size: 13px;
+        color: #333;
+        border: none;
+        border-radius: 3px;
+    }
+
+}

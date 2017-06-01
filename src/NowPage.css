@@ -1,0 +1,76 @@
+.App {
+  
+}
+
+.SideBar {
+    position:absolute;
+    left:0; top:65px; bottom: 0;
+    width: 178px;
+}
+
+button{
+  height:65px;
+  width: 178px;
+  font-size: 18pt;
+}
+
+.Productivity{
+  height:338px;
+  background-color: #00BCD4;
+}
+
+img{
+  width:178px;
+}
+
+.Dashboard {
+    position: absolute;
+    left:178px; top:65px; right:0; bottom:0;
+    background-color: white;
+}
+
+.top{
+  text-align: center;
+  height: auto;
+}
+
+.bottom{
+  text-align: center;
+  height: auto;
+}
+
+.NowTile{
+  text-align: center;
+  height: 247px;
+  width: 45%;
+  margin:20px;
+  background-color:pink;
+  display:inline-block;
+}
+
+.EventTile{
+  text-align: center;
+  height: 247px;
+  width: 45%;
+  margin:20px;
+  background-color: lightsalmon;
+  display:inline-block;
+}
+
+.RemindTile{
+  text-align: center;
+  height: 247px;
+  width: 45%;
+  margin:20px;
+  background-color: lightyellow;
+  display:inline-block;
+}
+
+.ToDoTile{
+  text-align: center;
+  height: 247px;
+  width: 45%;
+  margin:20px;
+  background-color: lightgreen;
+  display:inline-block;
+}

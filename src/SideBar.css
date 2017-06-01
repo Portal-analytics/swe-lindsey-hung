@@ -1,0 +1,36 @@
+.SideBar {
+    position:absolute;
+    left:0; top:65px; bottom: 0;
+    width: 177px;
+    background-color:white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 178px;
+    background-color: #f1f1f1;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 18px;
+    text-decoration: none;
+    text-align:center;
+    font-size: 14pt;
+    border-bottom: 1px solid #555
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #00BCD4;
+    color: white;
+}
+
+li a:active {
+    background-color: grey;
+    color: white;
+}
+

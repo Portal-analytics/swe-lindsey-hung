@@ -1,0 +1,40 @@
+.Dashboard{
+	height: 577px;
+}
+
+.NowTile{
+  text-align: center;
+  height: 247px;
+  width: 45%;
+  margin:20px;
+  background-color:pink;
+  display:inline-block;
+}
+
+.tileName{
+  display: inline-block;
+  text-align: center;
+}
+
+.editButton {
+  width: 30px;
+  height: auto;
+	background-color:pink;
+	border-radius:10px;
+	border:1px solid lightcoral;
+	position:relative;
+  left:170px; right:0; top:-10px; bottom:0;
+	cursor:pointer;
+	color: white;
+	font-family:Arial;
+	font-size:20px;
+	text-align: center;
+	text-decoration:none;
+}
+.editButton:hover {
+	background-color:lightcoral;
+}
+.editButton:active {
+	position:relative;
+	top:-7px;
+}

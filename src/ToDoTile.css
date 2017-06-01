@@ -1,0 +1,42 @@
+.ToDoTile{
+	top: 370px;
+	right: 675px;
+  text-align: center;
+  height: 275px;
+  width: 35%;
+  margin:20px;
+  /*background-color:lightgreen;*/
+  display:inline-block;
+	position: fixed;
+	background-image: url("http://www.colehardware.com/wp-content/themes/cole/images/corkboard-background.jpg");
+	background-size: cover;
+	
+}
+
+h1{
+  display: inline-block;
+  text-align: center;
+}
+
+.editButton1 {
+  width: 30px;
+  height: auto;
+	background-color:lightgreen;
+	border-radius:10px;
+	border:1px solid green;
+	position:relative;
+  left:170px; right:0; top:-10px; bottom:0;
+	cursor:pointer;
+	color: white;
+	font-family:Arial;
+	font-size:20px;
+	text-align: center;
+	text-decoration:none;
+}
+.editButton1:hover {
+	background-color:green;
+}
+.editButton1:active {
+	position:relative;
+	top:-7px;
+}
