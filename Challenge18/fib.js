@@ -1,7 +1,6 @@
 var prompt = require('prompt');
 prompt.start();
 prompt.get('FibSeq', function (err, result) {
-    var answer = 0;
     console.log('Fibonacci Sequence to ' + result.FibSeq);
     console.log(Fibonacci(result.FibSeq));
 });
