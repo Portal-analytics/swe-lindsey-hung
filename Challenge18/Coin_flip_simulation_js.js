@@ -7,17 +7,20 @@ prompt.get(['numOfFlips'], function (err, result) {
   });
 
 function flip(numFlip) {
-    var random_flip = Math.random() * 100;
+    var random_flip = Math.random() * 10;
     var heads = 0;
     var tails = 0;
 
+    console.log(random_flip);
+
     for (i = 0; i < numFlip; i++) {
-        if (random_flip > 50) {
-            heads + 1;
+        if (random_flip > 5) {
+            heads += 1;
         }
-        if (random_flip <= 50) {
-            tails + 1;
+        if (random_flip <= 5) {
+            tails += 1;
         }
+        var random_flip = Math.random() * 10;
     }
 
     console.log('heads:' + heads);

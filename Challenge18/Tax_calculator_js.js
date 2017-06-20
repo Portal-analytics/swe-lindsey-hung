@@ -6,11 +6,10 @@ prompt.get(['cost', 'tax'], function (err, result) {
   });
 
 function calcTax(cost, tax) {
-  var taxed_cost = cost * tax;
-  console.log(.7 * 10);
-  var total_cost = taxed_cost + cost;
+  var taxRate = Number(cost) * Number(tax);
+  let total_cost = Number(taxRate) + Number(cost);
 
-  console.log('cost: ' + taxed_cost);
+  console.log('cost: ' + cost);
   console.log('total: ' + total_cost);
 }
 
